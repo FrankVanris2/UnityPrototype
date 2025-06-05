@@ -1,0 +1,15 @@
+# Unity-generated files to ignore
+Library/
+Temp/
+Obj/
+Logs/
+UserSettings/
+*.csproj
+*.sln
+
+# Visual Studio cache
+/[Vv][Ss]/
+/.vs/
+
+# Unity generated upgrade log
+UpgradeLog.htm
