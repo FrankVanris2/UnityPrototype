@@ -31,7 +31,10 @@ public class CoinManager : MonoBehaviour
 
     public void CollectCoin()
     {
-        coinsCollected++;
+        if (coinsCollected < totalCoins)
+        {
+            coinsCollected++;
+        }
         UpdateUI();
     }
 
