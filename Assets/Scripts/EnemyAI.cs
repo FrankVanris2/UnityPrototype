@@ -1,13 +1,17 @@
-using System.Collections.Specialized;
-using System.Security.Cryptography;
-using System.Threading;
 using UnityEngine;
 
 public class EnemyAI : MonoBehaviour
 {
+    private DeathScreenManager deathScreenManager;
+
     [SerializeField] Transform player; // Assign in Inspector
     [SerializeField] float moveSpeed = 5f;
     bool isActive = true;
+
+    void Start()
+    {
+        deathScreenManager = FindFirstObjectByType<DeathScreenManager>();
+    }
 
     void Update()
     {
@@ -23,13 +27,16 @@ public class EnemyAI : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            if (other.CompareTag("Player"))
+            // "Kill" the player (make it disappear)
+            other.gameObject.SetActive(false);
+            isActive = false;
+            
+            if(deathScreenManager != null)
             {
-                // "Kill" the player (make it disappear)
-                other.gameObject.SetActive(false);
-                isActive = false;
-                //TODO: Add more game logic after the player dies
+                deathScreenManager.ShowDeathScreen();
             }
+            other.gameObject.SetActive(false);
+            
         }
     }
 }
