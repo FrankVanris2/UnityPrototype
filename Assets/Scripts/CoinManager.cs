@@ -10,6 +10,8 @@ using UnityEngine.UI;
 
 public class CoinManager : MonoBehaviour
 {
+    private WinScreenManager winScreenManager;
+
     public static CoinManager Instance { get; private set; }
 
     [SerializeField] Text coinText;
@@ -26,6 +28,7 @@ public class CoinManager : MonoBehaviour
 
     void Start()
     {
+        winScreenManager = FindFirstObjectByType<WinScreenManager>();
         UpdateUI();
     }
 
@@ -35,7 +38,13 @@ public class CoinManager : MonoBehaviour
         {
             coinsCollected++;
         }
+
         UpdateUI();
+
+        if (coinsCollected >= totalCoins && winScreenManager != null)
+        {
+            winScreenManager.ShowWinScreen();
+        }
     }
 
     void UpdateUI()
