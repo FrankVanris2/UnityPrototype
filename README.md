@@ -5,12 +5,13 @@
 In *Maze Escape*, you control a block navigating through a generated maze. Your goal is to collect all the coins before the enemy catches you.  
 
 ### **Features:**  
-- 🟦 **Top-down movement** with fluid player controls.  
-- 🔄 **Randomly generated mazes** for a fresh challenge each playthrough.  
-- 💰 **Coin collection mechanic** to track progress.  
-- 👾 **AI-controlled enemy** that chases the player.  
-- 🏆 **Victory condition** when all coins are collected.  
-- ⚠️ **Defeat condition** if caught by the enemy.  
+- 🟦 **Top-down movement** with fluid player controls. (**Completed**)
+- 🔄 **Randomly generated mazes** for a fresh challenge each playthrough. (*TODO*) 
+- 💰 **Coin collection mechanic** to track progress. (**Completed**)
+- 👾 **AI-controlled enemy** that chases the player. (**Completed**) 
+- 🏆 **Victory condition** when all coins are collected.(**Completed**)
+- ⚠️ **Defeat condition** if caught by the enemy. (**Completed**)
+
 
 ## **Installation**  
 1. Clone the repository:  
